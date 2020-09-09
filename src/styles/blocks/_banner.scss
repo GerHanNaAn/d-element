@@ -1,0 +1,33 @@
+.banner {
+  background-image: url(../../img/hero_bg.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: 687px;
+  height: 680px;
+  position: relative;
+  &::after {
+    content: "";
+    z-index: -1;
+    background: linear-gradient(
+      0deg,
+      #98c3e8 8.84%,
+      rgba(152, 195, 232, 0) 31.12%
+    );
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  &__box {
+    padding-top: 40px;
+  }
+  &__text {
+    max-width: 425px;
+    margin-bottom: 70px;
+  }
+  &__caption {
+    max-width: 510px;
+  }
+}

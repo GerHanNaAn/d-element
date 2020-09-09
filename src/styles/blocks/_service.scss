@@ -1,0 +1,17 @@
+.service {
+  padding: 185px 0 85px;
+  &__row {
+    justify-content: end;
+  }
+  &__card {
+    align-self: flex-end;
+  }
+  &__col {
+    align-items: flex-end;
+  }
+  &__title {
+    color: $bg-primary;
+    width: 360px;
+    margin-bottom: 160px;
+  }
+}

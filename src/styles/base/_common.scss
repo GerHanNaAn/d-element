@@ -1,0 +1,156 @@
+//Layout
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  &__item-2 {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+  }
+  &__item-3 {
+    flex: 0 0 33.333333%;
+    box-sizing: border-box;
+  }
+  &__item-4 {
+    flex: 1 0 25%;
+    box-sizing: border-box;
+  }
+}
+//Blocks
+.burger {
+  position: relative;
+  &,
+  &::after,
+  &::before {
+    content: "";
+    width: 24px;
+    height: 3px;
+    background: #356ead;
+    display: block;
+    transition: 0.3s;
+  }
+  &::after {
+    top: 7px;
+    position: absolute;
+  }
+  &::before {
+    top: -7px;
+    position: absolute;
+  }
+  &-wrap {
+    width: 24px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  // Animation
+  &_active {
+    background: transparent;
+  }
+  &_active::after {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  &_active::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+.logo {
+  width: 48px;
+  height: 32px;
+}
+.caption {
+  font-size: 64px;
+  line-height: 74px;
+  letter-spacing: 0.04em;
+  color: $tx-secondary;
+  font-family: Galien;
+}
+.text {
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  color: $tx-secondary;
+}
+.title {
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  &_middle {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: $tx-secondary;
+  }
+}
+.btn {
+  display: block;
+  background: $bg-secondary;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  color: $tx-primary;
+  letter-spacing: 0.04em;
+}
+.link {
+  text-decoration: none;
+}
+.card {
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  padding: 48px;
+  max-width: 380px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  &_top {
+    padding-top: 0;
+  }
+  &__img {
+    margin: 0 auto 45px;
+    display: block;
+    &_top {
+      position: relative;
+      bottom: 20px;
+      margin-bottom: 40px;
+    }
+  }
+  &__body {
+  }
+  &__title {
+    margin: 0 0 16px;
+  }
+  &__text {
+    margin-bottom: 32px;
+  }
+  &__link {
+    color: $bg-secondary;
+    fill: $bg-secondary;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    transition: 0.3s;
+    &:hover {
+      color: $bg-primary;
+      fill: $bg-primary;
+    }
+  }
+  &__icon {
+    margin-left: 28px;
+    margin-bottom: -3px;
+    width: 16px;
+    height: 16px;
+  }
+}

@@ -1,0 +1,4 @@
+document.querySelector(".burger-wrap").onclick = function () {
+  document.querySelector(".burger").classList.toggle("burger_active");
+};
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJtYWluLmpzIl0sInNvdXJjZXNDb250ZW50IjpbImRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYnVyZ2VyLXdyYXBcIikub25jbGljayA9IGZ1bmN0aW9uICgpIHtcclxuICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmJ1cmdlclwiKS5jbGFzc0xpc3QudG9nZ2xlKFwiYnVyZ2VyX2FjdGl2ZVwiKTtcclxufTsiXSwiZmlsZSI6Im1haW4uanMifQ==

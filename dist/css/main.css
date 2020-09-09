@@ -1,0 +1,180 @@
+@import url(//db.onlinewebfonts.com/c/d1243736bfe07b546f8f1e54e7804afb?family=Galien);
+@import url(//db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy);
+body {
+  margin: 0;
+  font-family: Gilroy, regular; }
+
+.container {
+  max-width: 940px;
+  margin: 0 auto; }
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 0; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap; }
+  .row__item-2 {
+    flex: 0 0 50%;
+    box-sizing: border-box; }
+  .row__item-3 {
+    flex: 0 0 33.333333%;
+    box-sizing: border-box; }
+  .row__item-4 {
+    flex: 1 0 25%;
+    box-sizing: border-box; }
+
+.burger {
+  position: relative; }
+  .burger, .burger::after, .burger::before {
+    content: "";
+    width: 24px;
+    height: 3px;
+    background: #356ead;
+    display: block;
+    transition: 0.3s; }
+  .burger::after {
+    top: 7px;
+    position: absolute; }
+  .burger::before {
+    top: -7px;
+    position: absolute; }
+  .burger-wrap {
+    width: 24px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer; }
+  .burger_active {
+    background: transparent; }
+  .burger_active::after {
+    top: 0;
+    transform: rotate(45deg); }
+  .burger_active::before {
+    top: 0;
+    transform: rotate(-45deg); }
+
+.logo {
+  width: 48px;
+  height: 32px; }
+
+.caption {
+  font-size: 64px;
+  line-height: 74px;
+  letter-spacing: 0.04em;
+  color: #1f3f68;
+  font-family: Galien; }
+
+.text {
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  opacity: 0.6;
+  color: #1f3f68; }
+
+.title {
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 0.05em; }
+  .title_middle {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #1f3f68; }
+
+.btn {
+  display: block;
+  background: #5a98d0;
+  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 0.04em; }
+
+.link {
+  text-decoration: none; }
+
+.card {
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  padding: 48px;
+  max-width: 380px;
+  box-sizing: border-box;
+  margin-bottom: 100px; }
+  .card_top {
+    padding-top: 0; }
+  .card__img {
+    margin: 0 auto 45px;
+    display: block; }
+    .card__img_top {
+      position: relative;
+      bottom: 20px;
+      margin-bottom: 40px; }
+  .card__title {
+    margin: 0 0 16px; }
+  .card__text {
+    margin-bottom: 32px; }
+  .card__link {
+    color: #5a98d0;
+    fill: #5a98d0;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    transition: 0.3s; }
+    .card__link:hover {
+      color: #316099;
+      fill: #316099; }
+  .card__icon {
+    margin-left: 28px;
+    margin-bottom: -3px;
+    width: 16px;
+    height: 16px; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 85px 0; }
+
+.banner {
+  background-image: url(../../img/hero_bg.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-size: 687px;
+  height: 680px;
+  position: relative; }
+  .banner::after {
+    content: "";
+    z-index: -1;
+    background: linear-gradient(0deg, #98c3e8 8.84%, rgba(152, 195, 232, 0) 31.12%);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; }
+  .banner__box {
+    padding-top: 40px; }
+  .banner__text {
+    max-width: 425px;
+    margin-bottom: 70px; }
+  .banner__caption {
+    max-width: 510px; }
+
+.service {
+  padding: 185px 0 85px; }
+  .service__row {
+    justify-content: end; }
+  .service__card {
+    align-self: flex-end; }
+  .service__col {
+    align-items: flex-end; }
+  .service__title {
+    color: #316099;
+    width: 360px;
+    margin-bottom: 160px; }
+
+/*# sourceMappingURL=maps/main.css.map */
