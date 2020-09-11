@@ -82,11 +82,17 @@
   letter-spacing: 0.05em;
   opacity: 0.6;
   color: $tx-secondary;
+  &_clr {
+    &_light {
+      color: $tx-primary;
+    }
+  }
 }
 .title {
   font-size: 36px;
   line-height: 46px;
   letter-spacing: 0.05em;
+  color: $tx-primary;
   &_middle {
     font-size: 20px;
     line-height: 30px;
@@ -104,6 +110,10 @@
   text-align: center;
   color: $tx-primary;
   letter-spacing: 0.04em;
+  transition: 0.3s;
+  &:hover {
+    background: $bg-primary;
+  }
 }
 .link {
   text-decoration: none;
@@ -153,4 +163,9 @@
     width: 16px;
     height: 16px;
   }
+}
+.company-name {
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  color: $tx-primary;
 }
