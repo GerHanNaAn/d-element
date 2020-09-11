@@ -258,7 +258,8 @@ a {
       padding: 0px 50px 0 100px; }
 
 .footer {
-  background: #316099; }
+  background: #316099;
+  padding-top: 50px; }
   .footer__text {
     color: #ffffff;
     opacity: 1; }
