@@ -1,5 +1,8 @@
 @import url("//db.onlinewebfonts.com/c/d1243736bfe07b546f8f1e54e7804afb?family=Galien");
-@import url("//db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy");
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy/Gilroy-Light.woff"); }
+
 body {
   margin: 0;
   font-family: "Gilroy"; }
@@ -9,7 +12,8 @@ a {
 
 ul {
   list-style: none;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 .container {
   max-width: 940px;
@@ -24,6 +28,8 @@ ul {
 .row {
   display: flex;
   flex-wrap: wrap; }
+  .row_nwp {
+    flex-wrap: nowrap; }
   .row__item-2 {
     flex: 0 0 50%;
     box-sizing: border-box; }
@@ -100,7 +106,7 @@ ul {
   box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
   border-radius: 10px;
   width: 220px;
-  padding: 15px;
+  padding: 18px;
   text-align: center;
   color: #ffffff;
   letter-spacing: 0.04em;
@@ -110,8 +116,6 @@ ul {
 
 .link {
   transition: 0.3s; }
-  .link:hover {
-    opacity: 0.6; }
 
 .card {
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
@@ -224,7 +228,7 @@ ul {
     background: #5a98d0;
     position: absolute;
     top: 0;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
     left: 0;
     border-radius: 200px 0px 0px 0px; }
@@ -269,8 +273,28 @@ ul {
       padding: 0px 50px 0 100px; }
 
 .footer {
-  background: #316099;
-  padding-top: 50px; }
+  position: relative; }
+  .footer::after {
+    content: "";
+    z-index: -1;
+    background: #316099;
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    right: 90px;
+    left: 0;
+    border-radius: 0px 200px 0px 0px; }
+  .footer::before {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #5a98d0; }
+  .footer__top-title {
+    width: 350px; }
   .footer__title {
     color: #ffffff; }
   .footer__text {
@@ -279,5 +303,34 @@ ul {
     margin-bottom: 16px; }
   .footer__copy {
     padding: 64px 0; }
+  .footer__elem {
+    margin-right: 20px; }
+  .footer__btn:hover {
+    background: #1f3f68;
+    background: #a1bff2; }
+  .footer__link:hover {
+    color: #a1bff2; }
+  .footer__bottom {
+    padding-top: 95px;
+    position: relative; }
+    .footer__bottom::after {
+      content: "";
+      border-top: 1px solid #fdffff88;
+      position: absolute;
+      width: 100%;
+      width: 79vw;
+      top: 0; }
+  .footer__top {
+    padding: 65px 0 90px; }
+  .footer__item {
+    justify-content: center;
+    display: flex;
+    align-items: center; }
+  .footer__logo {
+    margin-bottom: -10px; }
+  .footer__box {
+    margin-bottom: 35px; }
+  .footer__row {
+    justify-content: space-between; }
 
 /*# sourceMappingURL=maps/main.css.map */

@@ -1,6 +1,29 @@
 .footer {
-  background: #316099;
-  padding-top: 50px;
+  position: relative;
+  &::after {
+    content: "";
+    z-index: -1;
+    background: $bg-primary;
+    position: absolute;
+    top: 0;
+    bottom: 0px;
+    right: 90px;
+    left: 0;
+    border-radius: 0px 200px 0px 0px;
+  }
+  &::before {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $bg-secondary;
+  }
+  &__top-title {
+    width: 350px;
+  }
   &__title {
     color: $tx-primary;
   }
@@ -11,5 +34,48 @@
   }
   &__copy {
     padding: 64px 0;
+  }
+  &__elem {
+    margin-right: 20px;
+  }
+  &__btn {
+    &:hover {
+      background: $tx-secondary;
+      background: $muted;
+    }
+  }
+  &__link {
+    &:hover {
+      color: $muted;
+    }
+  }
+  &__bottom {
+    padding-top: 95px;
+    position: relative;
+    &::after {
+      content: "";
+      border-top: 1px solid #fdffff88;
+      position: absolute;
+      width: 100%;
+      width: 79vw;
+      top: 0;
+    }
+  }
+  &__top {
+    padding: 65px 0 90px;
+  }
+  &__item {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin-bottom: -10px;
+  }
+  &__box {
+    margin-bottom: 35px;
+  }
+  &__row {
+    justify-content: space-between;
   }
 }
