@@ -1,8 +1,15 @@
 .footer {
   background: #316099;
   padding-top: 50px;
+  &__title {
+    color: $tx-primary;
+  }
   &__text {
     color: $tx-primary;
     opacity: 1;
+    margin-bottom: 16px;
+  }
+  &__copy {
+    padding: 64px 0;
   }
 }

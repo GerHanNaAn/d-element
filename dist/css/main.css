@@ -2,10 +2,14 @@
 @import url("//db.onlinewebfonts.com/c/1dc8ecd8056a5ea7aa7de1db42b5b639?family=Gilroy");
 body {
   margin: 0;
-  font-family: Gilroy; }
+  font-family: "Gilroy"; }
 
 a {
   text-decoration: none; }
+
+ul {
+  list-style: none;
+  padding: 0; }
 
 .container {
   max-width: 940px;
@@ -105,7 +109,9 @@ a {
     background: #316099; }
 
 .link {
-  text-decoration: none; }
+  transition: 0.3s; }
+  .link:hover {
+    opacity: 0.6; }
 
 .card {
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
@@ -147,6 +153,11 @@ a {
   font-size: 28px;
   letter-spacing: 0.02em;
   color: #ffffff; }
+
+.list li {
+  margin-bottom: 16px; }
+  .list li:first-child {
+    margin-bottom: 32px; }
 
 .header {
   margin: 0 auto;
@@ -260,8 +271,13 @@ a {
 .footer {
   background: #316099;
   padding-top: 50px; }
+  .footer__title {
+    color: #ffffff; }
   .footer__text {
     color: #ffffff;
-    opacity: 1; }
+    opacity: 1;
+    margin-bottom: 16px; }
+  .footer__copy {
+    padding: 64px 0; }
 
 /*# sourceMappingURL=maps/main.css.map */

@@ -1,8 +1,12 @@
 body {
   margin: 0;
-  font-family: Gilroy;
+  font-family: "Gilroy";
   // background: $bg-secondary;
 }
 a {
   text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
 }

@@ -116,7 +116,10 @@
   }
 }
 .link {
-  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 .card {
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
@@ -168,4 +171,12 @@
   font-size: 28px;
   letter-spacing: 0.02em;
   color: $tx-primary;
+}
+.list {
+  & li {
+    &:first-child {
+      margin-bottom: 32px;
+    }
+    margin-bottom: 16px;
+  }
 }
