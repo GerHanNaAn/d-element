@@ -3,13 +3,6 @@
 @import "base/variables";
 @import "base/functions";
 
-// Шрифты
-// @import "../fonts/Gilroy/Gilroy-Regular.ttf";
-// @import "../fonts/Gilroy/Gilroy-Regular.eot";
-// @import "../fonts/Gilroy/Gilroy-Regular.woff";
-// @import "../fonts/Gilroy/Gilroy-Regular.woff2";
-// @import "../fonts/Gilroy/Gilroy-Regular.eot";
-
 // Наш код
 @import "base/fonts";
 @import "base/general";
@@ -20,4 +13,6 @@
 @import "blocks/banner";
 @import "blocks/service";
 @import "blocks/clients";
+@import "blocks/contact-info";
+@import "blocks/page-title";
 @import "blocks/footer";

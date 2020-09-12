@@ -15,6 +15,7 @@
   &_nwp {
     flex-wrap: nowrap;
   }
+
   &__item-2 {
     flex: 0 0 50%;
     box-sizing: border-box;
@@ -24,7 +25,7 @@
     box-sizing: border-box;
   }
   &__item-4 {
-    flex: 1 0 25%;
+    flex: 0 0 25%;
     box-sizing: border-box;
   }
 }
@@ -83,11 +84,10 @@
 .text {
   line-height: 26px;
   letter-spacing: 0.05em;
-  opacity: 0.6;
-  color: $tx-secondary;
+  color: $tx-secondary-muted;
   &_clr {
     &_light {
-      color: $tx-primary;
+      color: $tx-primary-muted;
     }
   }
 }
@@ -101,6 +101,7 @@
     line-height: 30px;
     letter-spacing: 0.05em;
     color: $tx-secondary;
+    font-weight: 900;
   }
 }
 .btn {
@@ -119,7 +120,7 @@
   }
 }
 .link {
-  transition: 0.3s;
+  // transition: 0.3s;
 }
 .card {
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
@@ -154,10 +155,11 @@
     font-size: 14px;
     letter-spacing: 0.05em;
     font-weight: 700;
-    transition: 0.3s;
-    &:hover {
+    &:hover,
+    &:hover .card__icon {
       color: $bg-primary;
       fill: $bg-primary;
+      transition: 0.3s;
     }
   }
   &__icon {
@@ -178,5 +180,84 @@
       margin-bottom: 32px;
     }
     margin-bottom: 16px;
+  }
+}
+.form {
+  padding: 56px;
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  &::-webkit-resizer {
+  }
+  &__inner {
+  }
+  &__item {
+    padding: 10px 0;
+  }
+  &__title {
+    margin: 0 0 45px;
+  }
+  &__subtitle {
+    letter-spacing: 0.04em;
+    margin-bottom: 15px;
+    color: #3d6497;
+  }
+  &__text {
+  }
+  &__message {
+  }
+  &__textarea {
+    resize: vertical;
+    rows: 5;
+    &::-webkit-resizer {
+      background-color: transparent;
+    }
+  }
+  &__submit {
+    width: 100%;
+  }
+  &__element {
+    padding: 21px 36px;
+    line-height: 30px;
+    border: 1px solid #95b4e978;
+    box-sizing: border-box;
+    border-radius: 10px;
+    &:focus,
+    &:active {
+      outline: none;
+      border: $bg-secondary solid 1px;
+    }
+  }
+}
+.contacts {
+  padding-top: 70px;
+  &__item {
+    margin-bottom: 40px;
+  }
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__img {
+  }
+  &__text {
+    margin: 0;
+  }
+  &__ico {
+    width: 20px;
+    height: 20px;
+    fill: $tx-secondary-muted;
+    margin-right: 15px;
+    transition: 0.3s;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    align-self: start;
+    margin-bottom: 16px;
+    &:hover,
+    &:hover .contacts__ico {
+      fill: $tx-secondary;
+      color: $tx-secondary;
+      transition: 0.3s;
+    }
   }
 }

@@ -1,0 +1,16 @@
+.page-title {
+  position: relative;
+  background: url(../img/contact-bg.svg);
+  background-size: cover;
+  &__conatiner {
+    max-width: 780px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .text {
+      text-align: center;
+    }
+  }
+}

@@ -2,7 +2,15 @@ body {
   margin: 0;
   font-family: "Gilroy";
 }
+button,
+input,
+form,
+textarea {
+  font-family: inherit;
+  font-family: "Gilroy";
+}
 a {
+  transition: 0.3s;
   text-decoration: none;
 }
 ul {
