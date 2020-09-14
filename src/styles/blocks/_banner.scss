@@ -1,6 +1,10 @@
 .banner {
-  height: 680px;
+  min-height: 680px;
   position: relative;
+  bottom: 45px;
+  @media (max-width: 767px) {
+    min-height: 420px;
+  }
   &::after {
     content: "";
     z-index: -1;
@@ -30,15 +34,29 @@
     bottom: 0;
     right: 20px;
     left: 0;
+    @media (max-width: 991px) {
+      opacity: 0.3;
+    }
   }
   &__box {
     padding-top: 40px;
+    @media (max-width: 767px) {
+      padding: 0;
+    }
   }
   &__text {
     max-width: 425px;
     margin-bottom: 70px;
+    @media (max-width: 991px) {
+      color: $tx-secondary;
+      font-weight: 900;
+    }
   }
   &__caption {
     max-width: 510px;
+    @media (max-width: 991px) {
+      font-size: 50px;
+      text-align: center;
+    }
   }
 }

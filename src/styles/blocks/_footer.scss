@@ -10,6 +10,9 @@
     right: 90px;
     left: 0;
     border-radius: 0px 200px 0px 0px;
+    @media (max-width: 1224px) {
+      right: 0;
+    }
   }
   &::before {
     content: "";
@@ -19,10 +22,9 @@
     bottom: 0;
     right: 0;
     left: 0;
-    background: $bg-secondary;
   }
   &__top-title {
-    width: 350px;
+    max-width: 350px;
   }
   &__title {
     color: $tx-primary;
@@ -62,7 +64,11 @@
     }
   }
   &__top {
+    justify-content: space-between;
     padding: 65px 0 90px;
+    @media (max-width: 767px) {
+      display: block;
+    }
   }
   &__item {
     justify-content: center;

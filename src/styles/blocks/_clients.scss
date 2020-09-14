@@ -1,5 +1,5 @@
 .clients {
-  padding: 96px 0 125px;
+  padding: 110px 0 125px;
   position: relative;
   &::after {
     content: "";
@@ -11,6 +11,9 @@
     right: 0;
     left: 0;
     border-radius: 200px 0px 0px 0px;
+  }
+  & + .footer::before {
+    background: $bg-secondary;
   }
   &__title {
   }
@@ -46,6 +49,15 @@
         z-index: 1;
       }
     }
+    @media (max-width: 767px) {
+      padding: 25px;
+      text-align: center;
+      flex: 0 0 50%;
+      border: 1px solid #fdffff88;
+      &:nth-child(4n + 4) {
+        border-right: 1px solid #fdffff88;
+      }
+    }
   }
   &__text {
     font-size: 20px;
@@ -56,12 +68,21 @@
   &__row {
     flex-wrap: nowrap;
     margin-bottom: 110px;
+    @media (max-width: 767px) {
+      display: block;
+      text-align: center;
+      padding: 10px;
+    }
     & h1,
     & p {
       margin: 0;
     }
     & .text.text_clr_light {
       padding: 0px 50px 0 100px;
+      @media (max-width: 767px) {
+        text-align: left;
+        padding: 0;
+      }
     }
   }
 }

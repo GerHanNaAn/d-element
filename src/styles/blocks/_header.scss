@@ -1,9 +1,13 @@
 .header {
   margin: 0 auto;
   max-width: 1366px;
+  z-index: 10;
   &__inner {
     display: flex;
     justify-content: space-between;
     padding: 50px 85px;
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
   }
 }

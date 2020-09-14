@@ -2,6 +2,13 @@
 .container {
   max-width: 940px;
   margin: 0 auto;
+  @media (max-width: 991px) {
+    max-width: 720px;
+  }
+  @media (max-width: 767px) {
+    max-width: 540px;
+    padding: 0 15px;
+  }
 }
 .col {
   display: flex;
@@ -119,9 +126,6 @@
     background: $bg-primary;
   }
 }
-.link {
-  // transition: 0.3s;
-}
 .card {
   box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
   border-radius: 10px;
@@ -135,6 +139,10 @@
   &__img {
     margin: 0 auto 45px;
     display: block;
+    object-fit: cover;
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
     &_top {
       position: relative;
       bottom: 20px;
@@ -186,7 +194,8 @@
   padding: 56px;
   box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
   border-radius: 10px;
-  &::-webkit-resizer {
+  @media (max-width: 767px) {
+    padding: 15px;
   }
   &__inner {
   }
@@ -230,6 +239,9 @@
 }
 .contacts {
   padding-top: 70px;
+  @media (max-width: 767px) {
+    padding-top: 0;
+  }
   &__item {
     margin-bottom: 40px;
   }
@@ -237,6 +249,9 @@
     margin-bottom: 24px;
   }
   &__img {
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
   &__text {
     margin: 0;
@@ -260,4 +275,79 @@
       transition: 0.3s;
     }
   }
+}
+.mobile-menu {
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: $tx-primary;
+  width: 300px;
+  height: 100%;
+  z-index: 20;
+  left: 100%;
+  transition: 0.3s;
+  &_active {
+    transform: translateX(-100%);
+  }
+  &__bg {
+    cursor: pointer;
+    z-index: 15;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $tx-primary-muted;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    &_active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  &__title {
+    justify-content: space-between;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+  }
+  &__cross {
+    width: 30px;
+    height: 30px;
+    fill: $bg-secondary;
+    cursor: pointer;
+    transition: 0.6s;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+  &__list {
+  }
+
+  &__link {
+    padding: 10px;
+    width: 100%;
+    box-shadow: 5px 9px 5px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    background: $bg-secondary;
+    color: $tx-primary;
+    font-size: 20px;
+    margin-bottom: 15px;
+    &:hover {
+      background: $bg-primary;
+    }
+  }
+}
+.lock {
+  overflow: hidden;
+}
+.hideScrl {
+  margin-right: 17px;
 }
