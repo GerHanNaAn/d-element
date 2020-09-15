@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy/Gilroy-Light.woff"); }
+  src: url("../fonts/Gilroy/Gilroy-Light.woff"), url("../fonts/Gilroy/Gilroy-Light.woff2"); }
 
 body {
   margin: 0;
@@ -193,6 +193,10 @@ ul {
       padding: 15px; } }
   .form__item {
     padding: 10px 0; }
+    @media (max-width: 767px) {
+      .form__item {
+        box-sizing: border-box;
+        min-height: 130px; } }
   .form__title {
     margin: 0 0 45px; }
   .form__subtitle {
@@ -201,7 +205,7 @@ ul {
     color: #3d6497; }
   .form__textarea {
     resize: vertical;
-    rows: 5; }
+    min-height: 100px; }
     .form__textarea::-webkit-resizer {
       background-color: transparent; }
   .form__submit {
@@ -250,7 +254,6 @@ ul {
 .mobile-menu {
   padding: 10px;
   box-sizing: border-box;
-  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
   position: fixed;
   right: 0;
   top: 0;
@@ -261,6 +264,7 @@ ul {
   left: 100%;
   transition: 0.3s; }
   .mobile-menu_active {
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     transform: translateX(-100%); }
   .mobile-menu__bg {
     cursor: pointer;
