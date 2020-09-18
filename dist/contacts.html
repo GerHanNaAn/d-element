@@ -75,7 +75,7 @@
         <div id="burger" class="burger-wrap">
             <span class="burger"></span>
         </div>
-        <div id="mobMBg" class="mobile-menu__bg"></div>
+        <div id="mobMBg" class="overlay"></div>
         <div id="mobileMenu" class="mobile-menu">
             <div class="mobile-menu__title">
                 <div class="mobile-menu__box">
@@ -89,12 +89,9 @@
                 </svg>
             </div>
             <ul class="mobile-menu__list">
-                <li class="mobile-menu__item"><a href="https://gerhannaan.github.io/d-element/dist/"
-                        class="mobile-menu__link">Home</a></li>
-                <li class="mobile-menu__item"><a href="https://gerhannaan.github.io/d-element/dist/contacts.html"
-                        class="mobile-menu__link">Contacts</a></li>
-                <li class="mobile-menu__item"><a
-                        href="https://kopeysk.hh.ru/resume/915112ccff07b1f8dc0039ed1f575452477478"
+                <li class="mobile-menu__item"><a href="./index.html" class="mobile-menu__link">Home</a></li>
+                <li class="mobile-menu__item"><a href="./contacts.html" class="mobile-menu__link">Contacts</a></li>
+                <li class="mobile-menu__item"><a href="https://hh.ru/resume/915112ccff07b1f8dc0039ed1f575452477478"
                         class="mobile-menu__link">About</a></li>
             </ul>
         </div>
@@ -219,7 +216,7 @@
                 </p>
             </div>
             <div class="row__item-3 footer__item">
-                <a href="#" class="btn footer__btn">Let’s Talk</a>
+                <button href="#" id="contacts" class="btn footer__btn">Let’s Talk</button>
             </div>
         </div>
     </div>
@@ -300,6 +297,51 @@
         </div>
     </div>
 </footer>
+
+    <div id="popupForm" class="popup">
+    <div id="overlay2" class="overlay"></div>
+    <div class="popup__body">
+        <div id="popupClose" class="popup__close">
+            <svg class="popup__icon">
+                <use xlink:href='#cross' />
+            </svg>
+        </div>
+        <div class="form">
+    <form class="form__inner" action="">
+        <div class="col">
+            <h1 class="title_middle form__title">SEND US MESSAGE</h1>
+            <div class="form__item col">
+                <label for="name" class="form__subtitle">
+                    Full Name
+                </label>
+                <input id="name" type="text" class="form__text form__element" form__element placeholder="Your Name">
+            </div>
+            <div class="form__item col">
+                <label for="email" class="form__subtitle">
+                    Your Email
+                </label>
+                <input id="email" type="email" class="form__message form__element" placeholder="Email">
+            </div>
+            <div class="form__item col">
+                <label for="message" class="form__subtitle">
+                    Message
+                </label>
+                <textarea id="message" name="message" id="message" cols="30" rows="5"
+                    class="form__textarea form__element" placeholder="Your Message"></textarea>
+            </div>
+            <div class="form__item col">
+                <div class="wrap">
+                    <input class="form__submit form__element btn" type="submit" value="SUBMIT">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <!-- <p class="popup__text title_middle">
+            Thank you. Your message has been sent.
+        </p> -->
+    </div>
+</div>
 
     <!-- Vendor scripts -->
 

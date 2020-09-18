@@ -18,6 +18,10 @@ textarea {
   font-family: inherit;
   font-family: "Gilroy"; }
 
+button {
+  border: none;
+  outline: none; }
+
 a {
   transition: 0.3s;
   text-decoration: none; }
@@ -121,6 +125,7 @@ ul {
 
 .btn {
   display: block;
+  box-sizing: border-box;
   background: #5a98d0;
   box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
   border-radius: 10px;
@@ -129,7 +134,9 @@ ul {
   text-align: center;
   color: #ffffff;
   letter-spacing: 0.04em;
-  transition: 0.3s; }
+  transition: 0.3s;
+  font-size: 16px;
+  cursor: pointer; }
   .btn:hover {
     background: #316099; }
 
@@ -187,7 +194,8 @@ ul {
 .form {
   padding: 56px;
   box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
-  border-radius: 10px; }
+  border-radius: 10px;
+  background: #ffffff; }
   @media (max-width: 767px) {
     .form {
       padding: 15px; } }
@@ -195,7 +203,6 @@ ul {
     padding: 10px 0; }
     @media (max-width: 767px) {
       .form__item {
-        box-sizing: border-box;
         min-height: 130px; } }
   .form__title {
     margin: 0 0 45px; }
@@ -266,21 +273,6 @@ ul {
   .mobile-menu_active {
     box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
     transform: translateX(-100%); }
-  .mobile-menu__bg {
-    cursor: pointer;
-    z-index: 15;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(255, 255, 255, 0.6);
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s; }
-    .mobile-menu__bg_active {
-      visibility: visible;
-      opacity: 1; }
   .mobile-menu__title {
     justify-content: space-between;
     display: flex;
@@ -313,6 +305,82 @@ ul {
 
 .hideScrl {
   margin-right: 17px; }
+
+.overlay {
+  cursor: pointer;
+  z-index: 15;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s; }
+  .overlay_active {
+    background: rgba(255, 255, 255, 0.6);
+    visibility: visible;
+    opacity: 1; }
+
+.popup {
+  z-index: 100;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 20px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0; }
+  @media (max-width: 576px) {
+    .popup {
+      padding: 0; } }
+  .popup_active {
+    overflow: hidden scroll;
+    visibility: visible;
+    opacity: 1; }
+  .popup__body {
+    box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+    max-width: 700px;
+    position: absolute;
+    z-index: 100;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box; }
+    @media (max-width: 576px) {
+      .popup__body {
+        margin: 0;
+        border-radius: 0; } }
+    @media (max-width: 767px) {
+      .popup__body {
+        padding: 20px;
+        max-width: 100%; }
+        .popup__body .form {
+          box-shadow: none; } }
+  .popup__text {
+    padding: 30px; }
+  .popup__close {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    box-shadow: -2px 2px 5px rgba(16, 112, 177, 0.2);
+    background: #ffffff;
+    display: flex;
+    border-radius: 5px; }
+  .popup__icon {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    fill: #5a98d0;
+    transition: transform 0.6s; }
+    .popup__icon:hover {
+      transform: rotate(180deg); }
 
 .header {
   margin: 0 auto;
@@ -369,7 +437,7 @@ ul {
   .banner__text {
     max-width: 425px;
     margin-bottom: 70px; }
-    @media (max-width: 991px) {
+    @media (max-width: 1224px) {
       .banner__text {
         color: #1f3f68;
         font-weight: 900; } }
@@ -378,7 +446,8 @@ ul {
     @media (max-width: 991px) {
       .banner__caption {
         font-size: 50px;
-        text-align: center; } }
+        text-align: center;
+        line-height: 45px; } }
   @media (max-width: 767px) {
     .banner__btn {
       margin: 0 auto; } }
@@ -496,7 +565,8 @@ ul {
       flex: 0 0 100%;
       max-width: 100%; } }
   .contacts-info__row {
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 40px; }
   .contacts-info__form {
     margin-bottom: 80px; }
   .contacts-info__map {

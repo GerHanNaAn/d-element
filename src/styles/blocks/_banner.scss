@@ -48,7 +48,7 @@
   &__text {
     max-width: 425px;
     margin-bottom: 70px;
-    @media (max-width: 991px) {
+    @media (max-width: 1224px) {
       color: $tx-secondary;
       font-weight: 900;
     }
@@ -58,6 +58,7 @@
     @media (max-width: 991px) {
       font-size: 50px;
       text-align: center;
+      line-height: 45px;
     }
   }
   &__btn {
