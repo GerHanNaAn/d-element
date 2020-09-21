@@ -201,12 +201,7 @@
   @media (max-width: 767px) {
     padding: 15px;
   }
-  &__inner {
-  }
   &__item {
-    @media (max-width: 767px) {
-      min-height: 130px;
-    }
     padding: 10px 0;
   }
   &__title {
@@ -216,10 +211,7 @@
     letter-spacing: 0.04em;
     margin-bottom: 15px;
     color: #3d6497;
-  }
-  &__text {
-  }
-  &__message {
+    display: inline;
   }
   &__textarea {
     resize: vertical;
@@ -242,6 +234,39 @@
       outline: none;
       border: $bg-secondary solid 1px;
     }
+    @media (max-width: 767px) {
+      min-height: 70px;
+    }
+  }
+  &__name {
+    text-transform: capitalize;
+  }
+  &__email,
+  &__name,
+  &__textarea {
+    transition: border-color 0.6s;
+    &:invalid:not(:placeholder-shown) {
+      border-color: #cf1e1e;
+      &:not(:focus) {
+        & + .form-info__email,
+        & + .form-info__name,
+        & + .form-info__textarea {
+          display: block;
+        }
+      }
+    }
+    &:valid {
+      border-color: #84e226;
+    }
+  }
+  &__info {
+    display: none;
+    background: $muted;
+    padding: 5px;
+    color: $tx-primary;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+    max-width: fit-content;
   }
 }
 .contacts {
@@ -421,6 +446,12 @@
     transition: transform 0.6s;
     &:hover {
       transform: rotate(180deg);
+    }
+  }
+  &__item {
+    display: none;
+    &_active {
+      display: block;
     }
   }
 }

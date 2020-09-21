@@ -201,15 +201,13 @@ ul {
       padding: 15px; } }
   .form__item {
     padding: 10px 0; }
-    @media (max-width: 767px) {
-      .form__item {
-        min-height: 130px; } }
   .form__title {
     margin: 0 0 45px; }
   .form__subtitle {
     letter-spacing: 0.04em;
     margin-bottom: 15px;
-    color: #3d6497; }
+    color: #3d6497;
+    display: inline; }
   .form__textarea {
     resize: vertical;
     min-height: 100px; }
@@ -226,6 +224,33 @@ ul {
     .form__element:focus, .form__element:active {
       outline: none;
       border: #5a98d0 solid 1px; }
+    @media (max-width: 767px) {
+      .form__element {
+        min-height: 70px; } }
+  .form__name {
+    text-transform: capitalize; }
+  .form__email, .form__name, .form__textarea {
+    transition: border-color 0.6s; }
+    .form__email:invalid:not(:placeholder-shown), .form__name:invalid:not(:placeholder-shown), .form__textarea:invalid:not(:placeholder-shown) {
+      border-color: #cf1e1e; }
+      .form__email:invalid:not(:placeholder-shown):not(:focus) + .form-info__email,
+      .form__email:invalid:not(:placeholder-shown):not(:focus) + .form-info__name,
+      .form__email:invalid:not(:placeholder-shown):not(:focus) + .form-info__textarea, .form__name:invalid:not(:placeholder-shown):not(:focus) + .form-info__email,
+      .form__name:invalid:not(:placeholder-shown):not(:focus) + .form-info__name,
+      .form__name:invalid:not(:placeholder-shown):not(:focus) + .form-info__textarea, .form__textarea:invalid:not(:placeholder-shown):not(:focus) + .form-info__email,
+      .form__textarea:invalid:not(:placeholder-shown):not(:focus) + .form-info__name,
+      .form__textarea:invalid:not(:placeholder-shown):not(:focus) + .form-info__textarea {
+        display: block; }
+    .form__email:valid, .form__name:valid, .form__textarea:valid {
+      border-color: #84e226; }
+  .form__info {
+    display: none;
+    background: #a1bff2;
+    padding: 5px;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
+    max-width: fit-content; }
 
 .contacts {
   padding-top: 70px; }
@@ -381,6 +406,10 @@ ul {
     transition: transform 0.6s; }
     .popup__icon:hover {
       transform: rotate(180deg); }
+  .popup__item {
+    display: none; }
+    .popup__item_active {
+      display: block; }
 
 .header {
   margin: 0 auto;

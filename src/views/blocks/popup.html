@@ -1,3 +1,4 @@
+<!-- Form -->
 <div id="popupForm" class="popup">
     <div id="overlay2" class="overlay"></div>
     <div class="popup__body">
@@ -6,9 +7,12 @@
                 <use xlink:href='#cross' />
             </svg>
         </div>
-        @@include("./form.html")
-        <!-- <p class="popup__text title_middle">
+        <div class="popup__form popup__item popup__item_active">
+            @@include("./form.html")
+        </div>
+
+        <p class="popup__item popup__text title_middle">
             Thank you. Your message has been sent.
-        </p> -->
+        </p>
     </div>
 </div>

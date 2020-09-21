@@ -163,36 +163,48 @@
             </div>
             <div class="contacts-info__item contacts-info__col">
                 <div class="form">
-    <form class="form__inner" action="">
-        <div class="col">
-            <h1 class="title_middle form__title">SEND US MESSAGE</h1>
-            <div class="form__item col">
-                <label for="name" class="form__subtitle">
-                    Full Name
-                </label>
-                <input id="name" type="text" class="form__text form__element" form__element placeholder="Your Name">
-            </div>
-            <div class="form__item col">
-                <label for="email" class="form__subtitle">
-                    Your Email
-                </label>
-                <input id="email" type="email" class="form__message form__element" placeholder="Email">
-            </div>
-            <div class="form__item col">
-                <label for="message" class="form__subtitle">
-                    Message
-                </label>
-                <textarea id="message" name="message" id="message" cols="30" rows="5"
-                    class="form__textarea form__element" placeholder="Your Message"></textarea>
-            </div>
-            <div class="form__item col">
-                <div class="wrap">
-                    <input class="form__submit form__element btn" type="submit" value="SUBMIT">
+                    <form class="form__inner" action="#" method="POST">
+                        <div class="col">
+                            <h1 class="title_middle form__title">SEND US MESSAGE</h1>
+                            <div class="form__item col">
+                                <label for="name" class="form__subtitle">
+                                    Full Name
+                                </label>
+                                <input id="name" type="text" class="form__name form__element" form__element
+                                    placeholder="Your Name" required pattern="([A-Za-zА-Яа-яЁё]*[\s]*)*">
+                                <p class="form__info form-info__name">
+                                    The name should only contain letters and spaces
+                                </p>
+                            </div>
+                            <div class="form__item col">
+                                <label for="email" class="form__subtitle">
+                                    Your Email
+                                </label>
+                                <input id="email" type="email" class="form__email form__element" placeholder="Email"
+                                    required>
+                                <p class="form__info form-info__email">
+                                    Enter your real email address
+                                </p>
+                            </div>
+                            <div class="form__item col">
+                                <label for="message" class="form__subtitle">
+                                    Message
+                                </label>
+                                <textarea id="message" name="message" id="message" cols="30" rows="5"
+                                    class="form__textarea form__element" placeholder="Your Message" required
+                                    minlength="18"></textarea>
+                                <p class="form__info form-info__textarea">
+                                    Tell us a little about your skills
+                                </p>
+                            </div>
+                            <div class="form__item col">
+                                <div class="wrap">
+                                    <input class="form__submit form__element btn" type="submit" value="SUBMIT">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </div>
-    </form>
-</div>
             </div>
         </div>
         <div class="row">
@@ -298,7 +310,8 @@
     </div>
 </footer>
 
-    <div id="popupForm" class="popup">
+    <!-- Form -->
+<div id="popupForm" class="popup">
     <div id="overlay2" class="overlay"></div>
     <div class="popup__body">
         <div id="popupClose" class="popup__close">
@@ -306,28 +319,39 @@
                 <use xlink:href='#cross' />
             </svg>
         </div>
-        <div class="form">
-    <form class="form__inner" action="">
+        <div class="popup__form popup__item popup__item_active">
+            <div id="popupForm" class="form">
+    <form class="form__inner" action="#" method="POST">
         <div class="col">
             <h1 class="title_middle form__title">SEND US MESSAGE</h1>
             <div class="form__item col">
-                <label for="name" class="form__subtitle">
+                <label for="popupName" class="form__subtitle">
                     Full Name
                 </label>
-                <input id="name" type="text" class="form__text form__element" form__element placeholder="Your Name">
+                <input id="popupName" type="text" class="form__name form__element" form__element placeholder="Your Name"
+                    required pattern="([A-Za-zА-Яа-яЁё]*[\s]*)*">
+                <p class="form__info form-info__name">
+                    The name should only contain letters and spaces
+                </p>
             </div>
             <div class="form__item col">
-                <label for="email" class="form__subtitle">
+                <label for="popupEmail" class="form__subtitle">
                     Your Email
                 </label>
-                <input id="email" type="email" class="form__message form__element" placeholder="Email">
+                <input id="popupEmail" type="email" class="form__email form__element" placeholder="Email" required>
+                <p class="form__info form-info__email">
+                    Enter your real email address
+                </p>
             </div>
             <div class="form__item col">
-                <label for="message" class="form__subtitle">
+                <label for="popupMessage" class="form__subtitle">
                     Message
                 </label>
-                <textarea id="message" name="message" id="message" cols="30" rows="5"
-                    class="form__textarea form__element" placeholder="Your Message"></textarea>
+                <textarea id="popupMessage" name="message" id="message" cols="30" rows="5"
+                    class="form__textarea form__element" placeholder="Your Message" required minlength="18"></textarea>
+                <p class="form__info form-info__textarea">
+                    Tell us a little about your skills
+                </p>
             </div>
             <div class="form__item col">
                 <div class="wrap">
@@ -337,9 +361,11 @@
         </div>
     </form>
 </div>
-        <!-- <p class="popup__text title_middle">
+        </div>
+
+        <p class="popup__item popup__text title_middle">
             Thank you. Your message has been sent.
-        </p> -->
+        </p>
     </div>
 </div>
 
