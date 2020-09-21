@@ -56,8 +56,8 @@ form.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
   const formData = {
-    name: document.querySelector("#name").value,
-    email: document.querySelector("#email").value,
+    name: document.querySelector("#popupName").value,
+    email: document.querySelector("#popupEmail").value,
   };
 
   const request = new XMLHttpRequest();
