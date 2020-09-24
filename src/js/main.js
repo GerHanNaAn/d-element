@@ -50,7 +50,8 @@ overlay2.addEventListener("click", popupActions);
 // AJAX
 const form = document.querySelector("#popupForm");
 const popupForm = document.querySelector(".popup__form");
-const popupDone = document.querySelector(".popup__text");
+const done = document.querySelector(".popup__done");
+const error = document.querySelector(".popup__error");
 
 form.addEventListener("submit", function (evt) {
   evt.preventDefault();
@@ -62,25 +63,32 @@ form.addEventListener("submit", function (evt) {
 
   const request = new XMLHttpRequest();
 
-  function popupTogle() {
+  function popupDone() {
     popupForm.classList.toggle("popup__item_active");
-    popupDone.classList.toggle("popup__item_active");
+    done.classList.toggle("popup__item_active");
+  }
+  function popupError() {
+    popupForm.classList.toggle("popup__item_active");
+    error.classList.toggle("popup__item_active");
   }
 
+  // Обработчик ответа сервера
   request.addEventListener("load", function () {
-    // В этой части кода можно обрабатывать ответ от сервера
-    console.log(request.response);
-    popupActions();
-    setTimeout(popupTogle, 600);
-    // popupActions();
-    setTimeout(popupActions, 700);
+    if (request.readyState == 4) {
+      if (request.status == 200) {
+        popupDone();
+      } else {
+        popupError();
+      }
+    }
   });
-
+  // Инициализация соединения с сервером
   request.open("POST", "", true);
   request.setRequestHeader(
     "Content-Type",
     "application/x-www-form-urlencoded; charset=UTF-8"
   );
+  // Отправка запроса серверу
   request.send(
     "name=" +
       encodeURIComponent(formData.name) +
